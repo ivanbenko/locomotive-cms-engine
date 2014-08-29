@@ -10,7 +10,6 @@ namespace :unicorn do
     on roles :app do
       execute "mkdir -p #{shared_path}/config"
       execute "mkdir -p #{shared_path}/log"
-      execute "mkdir -p #{File.dirname(fetch(:unicorn_pid))}"
       template "unicorn.rb.erb", fetch(:unicorn_config)
       template "unicorn_init.erb", "/tmp/unicorn_init"
       execute "chmod +x /tmp/unicorn_init"
@@ -24,11 +23,12 @@ namespace :unicorn do
     desc "#{command} unicorn"
     task command do
       on roles :app do
+        execute "mkdir -p #{File.dirname(fetch(:unicorn_pid))}"
         execute "sudo service unicorn_#{fetch(:application)} #{command}"
       end
     end
   end
 
-  after "deploy:finished", "unicorn:restart"
-  after "deploy:starting", "unicorn:stop"
+  after "deploy:restart", "unicorn:restart"
+  after "deploy:started", "unicorn:stop"
 end
