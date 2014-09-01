@@ -105,3 +105,4 @@ config/mongoid.yml
 config/secrets.yml
 
 public/assets/*
+public/sites/*

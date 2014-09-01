@@ -16,7 +16,7 @@ namespace :secrets do
   desc "Symlink the secrets.yml file into latest release"
   task :symlink do
     on roles :app do
-      run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
+      execute "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
     end
   end
   after "deploy:updated", "secrets:symlink"
