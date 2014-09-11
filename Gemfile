@@ -13,6 +13,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer', :platforms => :ruby
   gem 'turbo-sprockets-rails3'
+  gem "better_errors"
 end
 
 group :development do
@@ -24,5 +25,3 @@ group :development do
 end
 
 # Use unicorn as the app server
-gem 'unicorn'
-gem 'capistrano', '~> 3.2.0'

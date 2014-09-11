@@ -10,7 +10,7 @@ Locomotive.configure do |config|
     config.multi_sites do |multi_sites|
       # each new website you add will have a default entry based on a subdomain
       # and the multi_site_domain value (ex: website_1.locomotivehosting.com).
-      multi_sites.domain = 'locomotive.ivanbenko.com' #'myhostingplatform.com'
+      multi_sites.domain = 'locomotive.appouting.com' #'myhostingplatform.com'
 
       # define the reserved subdomains
       # Ex:
@@ -34,7 +34,7 @@ Locomotive.configure do |config|
   # config.site_locales = %w{en de fr pl pt-BR it nl nb es ru ja zh-CN cs bg sk sr}
 
   # tell if logs are enabled. Useful for debug purpose.
-  config.enable_logs = true
+  # config.enable_logs = true
 
   # Uncomment this line to force LocomotiveCMS to redirect all requests in the
   # back-office to https in production.
@@ -47,7 +47,7 @@ Locomotive.configure do |config|
   # Ex:
   # config.mailer_sender = 'support@example.com'
   # # => 'support@heroku.com' (Heroku), 'support@bushi.do' (Bushido), 'support@example.com' (Dev) or 'support@<your_hosting_platform>' (Multi-sites)
-  config.mailer_sender = 'support@example.com'
+  config.mailer_sender = 'support@locomotive.com'
 
   # allow apps using the engine to add their own Liquid drops, variables and similar available
   # in Liquid templates, extending the assigns used while rendering.
