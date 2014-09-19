@@ -62,7 +62,7 @@ LocomotiveCmsEngine::Application.configure do
     secrets = YAML::load(File.open("config/secrets.yml"))
     sendgrid = secrets['sendgrid']
 
-    config.actino_mailer.smtp_settings.merge ({
+    config.action_mailer.smtp_settings.merge ({
           :user_name       => sendgrid['username'],
           :password       => sendgrid['password']
     })
