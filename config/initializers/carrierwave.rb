@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
 
     when :development
       config.storage = :file
-      config.root = File.join(Rails.root, 'public')
+      config.root = File.join(Rails.root, 'public/locomotive')
 
     when :production
       # amazon = {}
