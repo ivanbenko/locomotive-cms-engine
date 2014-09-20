@@ -44,6 +44,7 @@ after "deploy", "deploy:cleanup"
 
 
 require_relative "recipes/base"
+require_relative "recipes/locomotive"
 require_relative "recipes/nginx"
 require_relative "recipes/unicorn"
 # load "config/recipes/postgresql"
