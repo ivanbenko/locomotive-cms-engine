@@ -10,7 +10,7 @@ Locomotive.configure do |config|
     config.multi_sites do |multi_sites|
       # each new website you add will have a default entry based on a subdomain
       # and the multi_site_domain value (ex: website_1.locomotivehosting.com).
-      multi_sites.domain = 'loc.appouting.com' #'myhostingplatform.com'
+      multi_sites.domain = 'loc.stein-pilz.com' #'myhostingplatform.com'
 
       # define the reserved subdomains
       # Ex:
