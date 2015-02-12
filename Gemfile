@@ -27,5 +27,3 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 gem 'capistrano', '~> 3.2.0'
-
-ruby '2.1.2'
