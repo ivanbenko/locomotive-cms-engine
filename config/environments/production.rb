@@ -62,11 +62,12 @@ LocomotiveCmsEngine::Application.configure do
     secrets = YAML::load(File.open("config/secrets.yml"))
     sendgrid = secrets['sendgrid']
 
-    config.action_mailer.smtp_settings.merge! ({
-          :user_name       => sendgrid['username'],
-          :password       => sendgrid['password']
-    })
-  end
+    if sendgrid
+      config.action_mailer.smtp_settings.merge! ({
+            :user_name       => sendgrid['username'],
+            :password       => sendgrid['password']
+      })
+    end  end
 
   # Enable threaded mode
   # config.threadsafe!
