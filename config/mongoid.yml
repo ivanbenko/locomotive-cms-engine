@@ -1,0 +1,30 @@
+development:
+  sessions:
+    default:
+      database: locomotive_dev
+      hosts:
+        - localhost:27017
+  options:
+    identity_map_enabled: true
+
+test:
+  sessions:
+    default:
+      database: locomotive_test
+      hosts:
+        - localhost:27017
+  options:
+    identity_map_enabled: true
+
+production:
+  sessions:
+    default:
+      database: locomotive_production
+      # heroku
+      # uri: <%= ENV['MONGOHQ_URL'] %>
+      username: <%= ENV['MONGODB_USERNAME'] %>
+      password: <%= ENV['MONGODB_PASSWORD'] %>
+      hosts:
+        - <%= "#{ENV['MONGODB_PORT_27017_TCP_ADDR'] || 'localhost' }:27017" %>
+  options:
+    identity_map_enabled: true

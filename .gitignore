@@ -101,7 +101,6 @@ capybara-*html
 #rspec coverage folder
 coverage/*
 
-config/mongoid.yml
 config/secrets.yml
 
 public/assets/*
